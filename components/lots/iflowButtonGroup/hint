@@ -1,0 +1,43 @@
+组件实例:
+<iflow-button-group
+    :fdId="fdId"
+    :validates="validates""
+    fdTemplateId="1115883993821589504"
+    formInstanceId="12345"
+    subject="物流云测试031130730900196683776"
+/>
+
+Attributes:
+fdId                    // String
+例子：
+[
+    {
+        handlerIds: "chenjh51",
+        nodeId: "N4"
+    },
+    {
+        handlerIds: "quhq1",
+        nodeId: "N5"
+    }
+]
+
+fdTemplateId            // String
+formInstanceId          // String
+subject                 // String
+extraParams             // Object 提交流程时的额外请求参数
+validates               // 校验数组，根据按钮明name进行绑定，根据按钮请求的前后触发before和after钩子，当before钩子返回false值时，后续流程停止
+例子：
+validates: [{
+    name: '提交',
+    before: () => { },
+    after: () => { }
+}, {
+    name: '通过',
+    before: () => { },
+    after: () => { }
+}, {
+    name: '撤回',
+    before: () => { },
+    after: () => { }
+}]
+
