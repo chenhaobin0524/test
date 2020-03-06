@@ -1,3 +1,0 @@
-5/30导入新增下载模板时带参tempparams，在调用组件时传入即可
-6/3导入增加调用回调函数import-callback，导入成功返回true，失败返回false
-6/17导入导出按钮加resourceId属性用于按钮加权
