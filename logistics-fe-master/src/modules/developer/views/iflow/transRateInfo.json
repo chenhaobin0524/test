@@ -1,0 +1,189 @@
+{
+    "table":
+    {
+        "selectBtn": true,
+        "clickState": true,
+        "height": 300,
+        "columns": [
+            {
+                "label": "ID编码",
+                "align": "center",
+                "sort": true,
+                "prop": "id",
+                "filter": true,
+                "width": 160
+            },
+            {
+                "label": "费率主键",
+                "align": "center",
+                "sort": true,
+                "prop": "transRateItemId",
+                "filter": true,
+                "width": 160
+            },
+            {
+                "label": "分公司",
+                "align": "center",
+                "prop": "companyName",
+                "filter": true,
+                "width": 160
+            },
+            {
+                "label": "服务平台",
+                "align": "center",
+                "prop": "siteName",
+                "width": 160,
+                "require": true
+            },
+            {
+                "label": "业务类型",
+                "align": "center",
+                "prop": "businessType",
+                "width": 160,
+                "require": true
+            },
+            {
+                "label": "费用名称",
+                "align": "center",
+                "prop": "feeName",
+                "width": 160,
+                "require": true
+            },
+            {
+                "label": "单据类型",
+                "align": "center",
+                "prop": "orderType",
+                "width": 160,
+                "require": true
+            },
+            {
+                "label": "订单来源",
+                "align": "center",
+                "prop": "orderSource",
+                "width": 160,
+                "require": true
+            },
+            {
+                "label": "计费方式",
+                "align": "center",
+                "prop": "chargeWay",
+                "width": 160,
+                "require": true
+            },
+            {
+                "label": "计费规则",
+                "align": "center",
+                "prop": "ruleCode",
+                "width": 160,
+                "require": true
+            },
+            {
+                "label": "价目表",
+                "align": "center",
+                "prop": "priceCode",
+                "width": 160,
+                "require": true
+            },
+            {
+                "label": "是否集拼",
+                "align": "center",
+                "prop": "ifCollect",
+                "type": "select",
+                "width": 160,
+                "require": true,
+                "sort": false
+            },
+            {
+                "label": "集拼方式",
+                "align": "center",
+                "prop": "collectUnit",
+                "width": 160,
+                "require": true
+            },
+            {
+                "label": "结算对象名称",
+                "align": "center",
+                "prop": "clearingObjectName",
+                "width": 160,
+                "require": true
+            },
+            {
+                "label": "指定客户",
+                "align": "center",
+                "prop": "appointCustomer",
+                "width": 160
+            },
+            {
+                "label": "客户名称",
+                "align": "center",
+                "prop": "customerName",
+                "width": 160,
+                "require": true
+            },
+            {
+                "label": "结算客户名称",
+                "align": "center",
+                "prop": "clearingCustomerName",
+                "width": 160,
+                "require": true
+            },
+            {
+                "label": "油卡支付比例",
+                "align": "center",
+                "prop": "oilPayRatio",
+                "width": 160,
+                "require": true
+            },
+            {
+                "label": "币种",
+                "align": "center",
+                "prop": "currency",
+                "width": 160,
+                "require": true
+            },
+            {
+                "label": "状态",
+                "align": "center",
+                "prop": "enabledFlag",
+                "width": 160
+            },
+            {
+                "label": "生效日期",
+                "align": "center",
+                "prop": "effectiveDate",
+                "type": "time",
+                "width": 160,
+                "require": true
+            },
+            {
+                "label": "失效日期",
+                "align": "center",
+                "prop": "expirationDate",
+                "type": "time",
+                "width": 160,
+                "require": true
+            },
+            {
+                "label": "备注",
+                "align": "center",
+                "prop": "remark",
+                "width": 160,
+                "require": true
+            }],
+        "action": [
+            {
+                "type": "text",
+                "label": "修改",
+                "size": "small",
+                "event": "amend"
+            }
+        ],
+        "leftOperation": true,
+        "leftWidth": 80
+    },
+    "page": {
+        "layout": "total, sizes, prev, pager, next, jumper",
+        "pageSize": 10,
+        "pageSizes": [10, 20, 30, 50, 100]
+    }
+}

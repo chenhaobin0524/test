@@ -1,0 +1,43 @@
+.echarts-bar {
+    width: 6rem;
+    height: 15rem;
+    position: relative;
+    background-color: #0058F4;
+    border-radius: 5px;
+    overflow: hidden;
+    .bar-title {
+        width: 100%;
+        position: absolute;
+        z-index: 100;
+        top: 1.5rem;
+        font-size: .8rem;
+        text-align: center;
+    }
+    .bar-occupancy {
+        width: 100%;
+        position: absolute;
+        bottom: 2rem;
+        font-size: .7rem;
+        z-index: 100;
+        text-align: center;
+        color: #fff;
+        .text{
+            margin-bottom:1rem;
+            .num{
+                font-size: 1.5rem;
+            }
+        }
+    }
+    .bar-chart {
+        width: 15rem;
+        height: 15rem;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        margin-left: -7rem;
+    }
+    #barId {
+        height: 100%;
+        width: 100%;
+    }
+}

@@ -1,0 +1,522 @@
+{
+  "searchList": {
+    "searchTxt": [{
+      "name": "发车单号",
+      "value": "dispatchNo",
+      "type": "input",
+      "unfold": true,
+      "span": 3
+    },{
+      "name": "创建时间",
+      "value": "createTime",
+      "startTime": "startCreateTime",
+      "endTime": "endCreateTime",
+      "startPlaceholder": "创建开始日期",
+      "endPlaceholder": "创建结束日期",
+      "type": "time",
+      "timeNum": 3,
+      "unfold": true,
+      "span": 7
+      },
+      {
+        "name": "发车单状态",
+        "value": "dispatchStatus",
+        "type": "select",
+        "unfold": true,
+        "filterable": true,
+        "multiple": true,
+        "optionNum":"DISPATCH_STATUS",
+        "options": [],
+        "span": 4
+      }],
+    "unfoldState": false,
+    "advancedBtn": true
+  },
+  "table":
+  {
+    "clickState": false,
+    "selectBtn": true,
+    "height": 400,
+    "columns": [
+      {
+        "label": "发车单号",
+        "prop": "dispatchNo",
+        "sort": true,
+        "width": 150,
+        "amendState": true
+      },
+      {
+        "label": "状态",
+        "prop": "dispatchStatus",
+        "optionNum":"DISPATCH_STATUS",
+        "sort": true,
+        "options": [],
+        "width": 78
+      },
+      {
+        "label": "承运商",
+        "prop": "carrierName",
+        "sort": true,
+        "width": 182
+      },
+      {
+        "label": "车辆信息",
+        "prop": "vehicleCard/equipmentName",
+        "sort": true,
+        "width": 150
+        },
+        {
+        "label": "司机信息",
+        "prop": "driver/driverContactWay",
+        "sort": true,
+        "width": 150
+      },
+      {
+        "label": "数量",
+        "sort": true,
+        "prop": "totalQty",
+        "width": 78
+      },
+      {
+        "label": "实发数量",
+        "sort": true,
+        "prop": "loadedEa",
+        "width": 110
+      },
+      {
+        "label": "单量",
+        "sort": true,
+        "prop": "taskCount",
+        "width": 78
+      },
+      {
+        "label": "重量(kg)",
+        "sort": true,
+        "prop": "totalGrossWeight",
+        "width": 98
+      },
+      {
+        "label": "方量(m³)",
+        "sort": true,
+        "prop": "volume",
+        "width": 100
+      },
+      {
+        "label": "轨迹",
+        "prop": "images",
+        "width": 50,
+        "type": "trajectory"
+      },
+      {
+        "label": "服务平台",
+        "sort": true,
+        "prop": "siteName",
+        "width": 110
+      },
+      {
+        "label": "调度人员",
+        "sort": true,
+        "prop": "createUserNameDispatch",
+        "width": 110
+      },
+      {
+        "label": "创建时间",
+        "sort": true,
+        "prop": "createTime",
+        "width": 150
+      },
+      {
+        "label": "发车时间",
+        "sort": true,
+        "prop": "dispatchTime",
+        "width": 150
+      },
+      {
+        "label": "预计到车时间",
+        "sort": true,
+        "prop": "besArriveDate",
+        "width": 150
+      },
+      {
+        "label": "预计逾期时间",
+        "sort": true,
+        "prop": "overDue",
+        "width": 150
+      },
+      {
+        "label": "采购渠道",
+        "sort": true,
+        "prop": "procurementChannelTetx",
+        "width": 110
+      },
+      {
+        "label": "客户",
+        "sort": true,
+        "prop": "customerName",
+        "width": 110
+      },
+      {
+        "label": "是否无车平台",
+        "sort": true,
+        "prop": "noCarPlatformFlagText",
+        "width": 130
+      },
+      {
+        "label": "无车平台类型",
+        "sort": true,
+        "prop": "noCarCarrierTypeName",
+        "optionNum":"no_car_carrier_type",
+        "options": [],
+        "width": 100
+      },
+      {
+        "label": "无车承运商",
+        "sort": true,
+        "prop": "noCarCarrierName",
+        "width": 120
+      },
+      {
+        "label": "打印提货单次数",
+        "sort": true,
+        "prop": "deliveryPrintTimes",
+        "width": 140
+      },
+      {
+        "label": "打印配送单次数",
+        "sort": true,
+        "prop": "distributionPrintTimes",
+        "width": 140
+      },
+      {
+        "label": "打印集配单次数",
+        "sort": true,
+        "prop": "collectPrintTimes",
+        "width": 140
+      },
+      {
+        "label": "打印出库单次数",
+        "sort": true,
+        "prop": "outPrintTimes",
+        "width": 140
+      },
+      {
+        "label": "打印分拨交接单次数",
+        "sort": true,
+        "prop": "allocatePrintTimes",
+        "width": 140
+      },
+      {
+        "label": "是否串点计费",
+        "sort": true,
+        "prop": "dmsText",
+        "width": 140,
+        "optionNum":"YES_OR_NO",
+        "options": []
+      },
+      {
+        "label": "到车登记时间",
+        "sort": true,
+        "prop": "actualArriveDate",
+        "width": 150
+      },
+      {
+        "label": "到车登记方式",
+        "sort": true,
+        "prop": "arriveType",
+        "optionNum":"PICK_UP_TYPE",
+        "options": [],
+        "width": 130
+      },
+      {
+        "label": "始发地",
+        "sort": true,
+        "prop": "senderTownName",
+        "width": 100
+      },
+      {
+        "label": "目的地",
+        "sort": true,
+        "prop": "receiverTownName",
+        "width": 100
+      },
+      {
+        "label": "备注",
+        "sort": true,
+        "prop": "remark",
+        "width": 120
+      },
+      {
+        "label": "编辑人",
+        "sort": true,
+        "prop": "updateUserName",
+        "width": 100
+      },
+      {
+        "label": "装载过低异常类型",
+        "sort": true,
+        "prop": "exceptionTypeName",
+        "optionNum":"exception_type",
+        "options": [],
+        "width": 160
+      },
+      {
+        "label": "装载过低异常备注",
+        "sort": true,
+        "prop": "exceptionMark",
+        "width": 160
+      },
+      {
+        "label": "设备号",
+        "sort": true,
+        "prop": "deviceNo",
+        "width": 130
+      },
+      {
+        "label": "设备类型",
+        "sort": true,
+        "prop": "deviceTypeName",
+        "width": 110
+      },
+      {
+        "label": "排队编码",
+        "prop": "queueCode",
+        "sort": true,
+        "width": 160
+      }
+    ],
+    "action": [
+      {
+        "type": "text",
+        "label": "编辑",
+        "size": "mini",
+        "event": "check",
+        "ifHas": "04040003"
+      },
+      {
+        "type": "text",
+        "label": "取消发车单",
+        "size": "mini",
+        "event": "dispatch",
+        "ifHas": "04040004"
+      },
+      {
+        "type": "text",
+        "label": "打印",
+        "size": "mini",
+        "event": "print",
+        "ifHas": "04040005"
+      },
+      {
+        "type": "text",
+        "label": "编辑",
+        "size": "mini",
+        "event": "editor",
+        "ifHas": "04040002"
+      },
+      {
+        "type": "text",
+        "label": "设备",
+        "size": "mini",
+        "event": "device",
+        "ifHas": "04040015"
+      },
+      {
+        "type": "text",
+        "label": "调整",
+        "size": "mini",
+        "event": "adjust",
+        "ifHas": "04040010"
+      }
+    ],
+    "leftOperation": true,
+    "leftWidth": 230
+  },
+  "page": {
+    "layout": "total, sizes, prev, pager, next, jumper",
+    "pageSize": 10,
+    "pageSizes": [10, 20, 30, 50 ,100]
+  },
+  "searchTotalTitle": [
+    {
+        "name": "运输单号",
+        "value": "taskNo",
+        "type": "input"
+    },
+    {
+      "name": "发车时间",
+      "value": "dispatchTime",
+      "startTime": "startDispatchTime",
+      "endTime": "endDispatchTime",
+      "type": "time",
+      "unfold": true,
+      "span": 7
+    },
+    {
+        "name": "是否打印单据",
+        "value": "isPrintAssembly",
+        "type": "select",
+        "optionNum": "YES_OR_NO"
+    },
+    {
+        "name": "设备类型",
+        "value": "deviceType",
+        "type": "select",
+        "optionNum": "deviceType"
+    },
+    {
+        "name": "服务平台",
+        "advanceLabel": "服务平台",
+        "value": "siteName",
+        "advanceConfig": [
+            { "prop": "escoCompanyNameCn", "value": "服务平台名称" },
+            { "prop": "escoCompanyNo", "value": "服务平台编码" }
+        ],
+        "tableConfig": [
+          { "prop": "escoCompanyNameCn", "value": "服务平台名称" },
+            { "prop": "escoCompanyNo", "value": "服务平台编码" }
+        ],
+        "advanceUrl": "/searchPlatform",
+        "type": "advance",
+        "cbParams": [
+            "escoCompanyNo#siteCode", "escoCompanyNameCn#siteName"
+        ]
+    },
+    {
+        "name": "采购渠道",
+        "value": "procurementChannel",
+        "optionNum": "OTP_TMS_PROCUREMENT_CHANNEL",
+        "options": [],
+        "type": "select"
+    },
+    {
+        "name": "调度人员",
+        "value": "createUserNameDispatch",
+        "type": "input"
+    },
+    {
+        "name": "客户订单号",
+        "value": "custOrderNo",
+        "type": "input"
+    },
+    {
+        "name": "物流订单号",
+        "value": "orderNo",
+        "type": "input"
+    },
+    {
+      "name": "排队编码",
+      "value": "queueCode",
+      "type": "input"
+    },
+    {
+      "name": "仓库",
+      "value": "whName",
+      "unfold": true,
+      "advanceConfig": [
+          { "prop": "cdwhName", "value": "仓库名称" },
+          { "prop": "whCode", "value": "仓库编码" }
+      ],
+      "tableConfig": [
+          { "prop": "whCode", "value": "仓库编码" },
+          { "prop": "cdwhName", "value": "仓库名称" }
+      ],
+      "advanceUrl": "cdWarehouse/search?cdwhIsStop=0",
+      "cbParams": [
+          "whCode", "cdwhName#whName"
+      ],
+      "type": "advance",
+      "advanceCode": "cdwhName"
+    },
+    {
+        "name": "承运商",
+        "advanceLabel": "承运商",
+        "value": "carrierName",
+        "advanceConfig": [
+            { "prop": "suppliersNameCn", "value": "承运商名称" },
+            { "prop": "suppliersCode", "value": "承运商编码" },
+            { "prop": "tranName", "value": "采购渠道" }
+        ],
+        "tableConfig": [
+          { "prop": "suppliersNameCn", "value": "承运商名称" },
+          { "prop": "suppliersCode", "value": "承运商编码" },
+          { "prop": "tranName", "value": "采购渠道" }
+        ],
+        "advanceUrl": "ebSupplier/searchBySupplier",
+        "type": "advance",
+        "cbParams": [
+            "suppliersNameCn#carrierName", "suppliersCode#carrierCode", "tranName", "transType"
+        ],
+        "advanceCascade": "suppliersCode#carrierCode"
+    },
+    {
+      "name": "客户",
+      "value": "customerName",
+      "type": "advance",
+      "unfold": true,
+      "advanceConfig": [
+          { "prop": "ebcuNameCn", "value": "客户名称" },
+          { "prop": "pmCode", "value": "客户编码" }
+      ],
+      "tableConfig": [
+          { "prop": "pmCode", "value": "客户编码" },
+          { "prop": "ebcuNameCn", "value": "客户名称" }
+      ],
+      "advanceUrl": "/ebCustomer/searchByEbCustomer",
+      "cbParams": ["pmCode#customerCode", "ebcuNameCn#customerName"],
+      "advanceCode": "advanceCode"
+    },
+    {
+      "name": "无车平台类型",
+      "value": "noCarCarrierType",
+      "type": "select",
+      "optionNum": "no_car_carrier_type"
+    },
+    {
+        "name": "无车承运商",
+        "advanceLabel": "无车承运商",
+        "value": "noCarCarrierName",
+        "advanceConfig": [
+            { "prop": "suppliersNameCn", "value": "无车承运商名称" },
+            { "prop": "suppliersCode", "value": "无车承运商编码" },
+            { "prop": "tranName", "value": "采购渠道" }
+        ],
+        "tableConfig": [
+          { "prop": "suppliersNameCn", "value": "无车承运商名称" },
+          { "prop": "suppliersCode", "value": "无车承运商编码" },
+          { "prop": "tranName", "value": "采购渠道" }
+        ],
+        "advanceUrl": "ebSupplier/searchBySupplier",
+        "type": "advance",
+        "cbParams": [
+            "suppliersNameCn#noCarCarrierName", "suppliersCode#noCarCarrierCode"
+        ]
+    },
+    {
+        "name": "车牌号",
+        "advanceLabel": "车牌号",
+        "value": "vehicleCard",
+        "advanceConfig": [
+            { "prop": "licensePlateNumber", "value": "车牌" },
+            { "prop": "cargoVolumeStr", "value": "载货体积" },
+            { "prop": "cdegNameCn", "value": "车型" }
+        ],
+        "tableConfig": [
+            { "prop": "licensePlateNumber", "value": "车牌" },
+            { "prop": "cargoVolume", "value": "载货体积" },
+            { "prop": "cdegNameCn", "value": "车型" }
+        ],
+        "advanceUrl": "suCar/searchByConditions",
+        "type": "advance",
+        "cbParams": [
+          "licensePlateNumber#vehicleCard", "cargoVolumeStr", "cdegNameCn#equipmentName", "suppliersCode", "cdegNameCn#equipmentType"
+        ],
+        "advanceCascade": "carrierCode#suppliersCode"
+    },
+    {
+        "name": "是否下发",
+        "value": "carrierVisibleFlag",
+        "type": "select",
+        "options": [{"value": "Y", "label": "是"}, {"value": "N", "label": "否"}]
+    }
+]
+}

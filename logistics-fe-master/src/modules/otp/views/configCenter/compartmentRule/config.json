@@ -1,0 +1,173 @@
+{
+    "configuration": true,
+    "searchList": {
+        "searchTxt": [
+            {
+                "name": "客户",
+                "type": "advance",
+                "value": "customerName",
+                "unfold": true,
+                "span": 4,
+                "advanceConfig": [
+                    { "prop": "ebcuNameCn", "value": "客户名称" },
+                    { "prop": "pmCode", "value": "客户编码" }
+                ],
+                "tableConfig": [
+                    { "prop": "pmCode", "value": "客户编码" },
+                    { "prop": "ebcuNameCn", "value": "客户名称" }
+                ],
+                "advanceUrl": "/ebCustomer/searchByEbCustomer",
+                "cbParams": [
+                    "pmCode#customerCode","ebcuNameCn#customerName"
+                ]
+            },
+            {
+                "name": "平台",
+                "value": "siteName",
+                "unfold": true,
+                "advanceConfig": [
+                    { "prop": "escoCompanyNameCn", "value": "服务平台名称" },
+                    { "prop": "escoCompanyNo", "value": "服务平台编码" }
+                ],
+                "tableConfig": [
+                    { "prop": "escoCompanyNo", "value": "服务平台编码" },
+                    { "prop": "escoCompanyNameCn", "value": "服务平台名称" }
+                ],
+                "advanceUrl": "/searchPlatform",
+                "cbParams": ["escoCompanyNo#siteCode", "escoCompanyNameCn#siteName"],
+                "type": "advance",
+                "span": 4
+            }
+        ],
+        "unfoldState": false
+    },
+    "table": {
+        "switchType": true,
+        "tableCut": true,
+        "clickModify": true,
+        "selectBtn": true,
+        "leftOperation": true,
+        "height": 400,
+        "statesY": "开",
+        "statesN": "关",
+        "columns": [
+            {
+                "label": "客户",
+                "prop": "customerName",
+                "require": true,
+                "advanceConfig": [
+                    { "prop": "ebcuNameCn", "value": "客户名称" },
+                    { "prop": "pmCode", "value": "客户编码" }
+                ],
+                "tableConfig": [
+                    { "prop": "pmCode", "value": "客户编码" },
+                    { "prop": "ebcuNameCn", "value": "客户名称" }
+                ],
+                "type": "advance",
+                "advanceUrl": "/ebCustomer/searchByEbCustomer",
+                "cbParams": [
+                    "pmCode#customerCode", "ebcuNameCn#customerName"
+                ],
+                "width": 200
+            },
+            {
+                "label": "订单类型",
+                "prop": "inOutType",
+                "require": true,
+                "width": 120,
+                "type": "select",
+                "optionNum": "IN_OUT_TYPE",
+                "options": []
+            },
+            {
+                "label": "服务平台",
+                "prop": "siteName",
+                "require": true,
+                "mustFill": true,
+                "advanceConfig": [
+                    { "prop": "escoCompanyNameCn", "value": "服务平台名称" },
+                    { "prop": "escoCompanyNo", "value": "服务平台编码" }
+                ],
+                "tableConfig": [
+                    { "prop": "escoCompanyNo", "value": "服务平台编码" },
+                    { "prop": "escoCompanyNameCn", "value": "服务平台名称" }
+                ],
+                "advanceUrl": "/searchPlatform",
+                "cbParams": ["escoCompanyNo#siteCode", "escoCompanyNameCn#siteName"],
+                "type": "advance",
+                "width": 200
+            },
+            {
+                "label": "自动分仓类型",
+                "prop": "compartType",
+                "require": true,
+                "mustFill": true,
+                "width": 120,
+                "type": "select",
+                "optionNum": "COMPART_TYPE",
+                "options": []
+            },
+            {
+                "label": "仓库",
+                "prop": "whName",
+                "require": true,
+                "advanceConfig": [
+                    { "prop": "cdwhName", "value": "仓库名称" },
+                    { "prop": "whCode", "value": "仓库编码" }
+                ],
+                "tableConfig": [
+                    { "prop": "whCode", "value": "仓库编码" },
+                    { "prop": "cdwhName", "value": "仓库名称" }
+                ],
+                "advanceUrl": "cdWarehouse/search?cdwhIsStop=0",
+                "cbParams": [
+                    "whCode", "cdwhName#whName"
+                ],
+                "type": "advance",
+                "width": 200
+            },
+            {
+                "label": "创建时间",
+                "align": "center",
+                "prop": "createTime",
+                "width": 150
+            },
+            {
+                "label": "创建人",
+                "align": "center",
+                "prop": "createUserCode",
+                "width": 120
+            },
+            {
+                "label": "最后修改时间",
+                "align": "center",
+                "prop": "updateTime",
+                "width": 150
+            },
+            {
+                "label": "最后修改人",
+                "align": "center",
+                "prop": "updateUserCode",
+                "width": 120
+            }
+        ],
+        "action": [
+            {
+                "type": "text",
+                "label": "编辑",
+                "size": "small",
+                "event": "edit"
+            }
+        ]
+    },
+    "page": {
+        "layout": "total, sizes, prev, pager, next, jumper",
+        "pageSize": 10,
+        "pageSizes": [
+            10,
+            20,
+            50,
+            100
+        ]
+    }
+}

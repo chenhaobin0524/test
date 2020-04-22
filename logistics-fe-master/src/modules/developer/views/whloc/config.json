@@ -1,0 +1,311 @@
+{
+    "searchList": {
+      "searchTxt": [
+        {
+          "name": "库位编码",
+          "value": "locCode",
+          "type": "input",
+          "unfold": true,
+          "span": 4
+        },{
+          "name": "物理仓名称",
+          "value": "whName",
+          "ganged": "whCode",
+          "passValue": "whCode",
+          "type": "autocomplete",
+          "tableName": "WarehouseInfo",
+          "relevanceClear": ["areaCode","areaName","zoneCode","zoneName"],
+          "unfold": true,
+          "span": 4
+        },{
+          "name": "区域名称",
+          "value": "areaName",
+          "ganged": "areaCode",
+          "passValue": "areaCode",
+          "type": "autocomplete",
+          "tableName": "WhArea",
+          "relevanceClear": ["zoneCode","zoneName"],
+          "relevanceOne": "whCode",
+          "unfold": true,
+          "span": 4
+        },{
+          "name": "库区名称",
+          "value": "zoneName",
+          "ganged": "zoneCode",
+          "passValue": "zoneCode",
+          "type": "autocomplete",
+          "tableName": "WhZone",
+          "relevanceOne": "areaCode",
+          "relevanceTwo": "whCode",
+          "unfold": true,
+          "span": 4
+        },
+        {
+          "name": "是否启用",
+          "value": "status",
+          "type": "select",
+          "unfold": true,
+          "span": 4
+        }],
+      "unfoldState": false
+        },
+    "table":
+    {
+        "height": 300,
+        "columns": [
+          {
+            "label": "库位编码",
+            "sort": true,
+            "prop": "locCode",
+            "amendState": true,
+            "require": true,
+            "width": 100
+          },
+          {
+            "label": "物理仓名称",
+            "sort": true,
+            "prop": "whName",
+            "ganged": "whCode", 
+            "type": "autocomplete",
+            "tableName": "WarehouseInfo",
+            "relevanceClear": ["areaCode","areaName","zoneCode","zoneName"],
+            "gangeds": ["siteName","siteCode"],
+            "require": true,
+            "width": 100
+          },
+          {
+            "label": "区域名称",
+            "sort": true,
+            "prop": "areaName",
+            "ganged": "areaCode", 
+            "type": "autocomplete",
+            "tableName": "WhArea",
+            "relevanceClear": ["zoneCode","zoneName"],
+            "require": true,
+            "width": 120,
+            "relevanceOne": "whCode"
+          },
+          {
+            "label": "库区名称",
+            "sort": true,
+            "prop": "zoneName",
+            "ganged": "zoneCode", 
+            "type": "autocomplete",
+            "tableName": "WhZone",
+            "require": true,
+            "width": 120,
+            "relevanceOne": "areaCode",
+            "relevanceTwo": "whCode"
+          },
+          {
+            "label": "是否启用",
+            "sort": false,
+            "prop": "status",
+            "type": "switch",
+            "optionNum": "SYS_WM_YES_NO",
+            "require": true,
+            "width": 80
+          },
+          {
+            "label": "是否冻结",
+            "sort": false,
+            "prop": "ynEnable",
+            "type": "select",
+            "optionNum": "SYS_WM_YES_NO",
+            "require": true,
+            "width": 80
+          },
+          {
+            "label": "库位种类",
+            "sort": false,
+            "prop": "category",
+            "type": "select",
+            "optionNum": "SYS_WM_CATEGORY",
+            "require": true,
+            "width": 100
+          },
+          {
+            "label": "使用类型",
+            "sort": false,
+            "prop": "locUseType",
+            "type": "select",
+            "optionNum": "SYS_WM_LOC_USE_TYPE",
+            "require": true,
+            "width": 100
+          },
+          {
+            "label": "商品ABC",
+            "sort": false,
+            "prop": "abc",
+            "type": "select",
+            "optionNum": "SYS_WM_ABC",
+            "require": true,
+            "width": 100
+          },
+          {
+            "label": "长(m)",
+            "sort": false,
+            "prop": "length",
+            "require": true,
+            "width": 60
+          },
+          {
+            "label": "宽(m)",
+            "sort": false,
+            "prop": "width",
+            "require": true,
+            "width": 60
+          },
+          {
+            "label": "高(m)",
+            "sort": false,
+            "prop": "height",
+            "require": true,
+            "width": 60
+          },
+          {
+            "label": "层",
+            "sort": false,
+            "prop": "floor",
+            "require": true,
+            "width": 60
+          },
+          {
+            "label": "最大数量",
+            "sort": false,
+            "prop": "maxCount",
+            "width": 100,
+            "require": true
+          },
+          {
+            "label": "最大重量",
+            "sort": false,
+            "prop": "maxWeight",
+            "width": 100,
+            "require": true
+          },
+          {
+            "label": "最大体积",
+            "sort": false,
+            "prop": "maxCubic",
+            "width": 100,
+            "require": true
+          },
+          {
+            "label": "最大托盘数",
+            "sort": false,
+            "prop": "maxPl",
+            "width": 100,
+            "require": true
+          },
+          {
+            "label": "条码(RFID)",
+            "sort": false,
+            "prop": "locRfid",
+            "width": 120,
+            "require": true
+          },
+          {
+            "label": "是否允许混商品",
+            "sort": false,
+            "prop": "ynMixSku",
+            "type": "select",
+            "optionNum": "SYS_WM_YES_NO",
+            "width": 120,
+            "require": true
+          },
+          {
+            "label": "最大混商品数量",
+            "sort": false,
+            "prop": "maxMixSku",
+            "width": 120,
+            "require": true
+          },
+          {
+            "label": "是否允许混批次",
+            "sort": false,
+            "prop": "ynMixLot",
+            "type": "select",
+            "optionNum": "SYS_WM_YES_NO",
+            "width": 120,
+            "require": true
+          },
+          {
+            "label": "最大混批次数量",
+            "sort": false,
+            "prop": "maxMixLot",
+            "width": 120,
+            "require": true
+          },
+          {
+            "label": "X坐标",
+            "sort": false,
+            "prop": "x",
+            "require": true,
+            "width": 60
+          },
+          {
+            "label": "Y坐标",
+            "sort": false,
+            "prop": "y",
+            "require": true,
+            "width": 60
+          },
+          {
+            "label": "Z坐标",
+            "sort": false,
+            "prop": "z",
+            "require": true,
+            "width": 60
+          },
+          {
+            "label": "备注",
+            "sort": false,
+            "prop": "remark",
+            "require": true,
+            "width": 200
+          },
+          {
+            "label": "服务平台",
+            "prop": "siteName",
+            "width": 140
+          },
+          {
+            "label": "创建人",
+            "sort": false,
+            "prop": "createUserName",
+            "width": 100
+          },
+          {
+            "label": "创建时间",
+            "sort": false,
+            "prop": "createTime",
+            "width": 150
+          },
+          {
+            "label": "修改人",
+            "sort": false,
+            "prop": "updateUserName",
+            "width": 100
+          },
+          {
+            "label": "修改时间",
+            "sort": false,
+            "prop": "updateTime",
+            "width": 150
+          }],
+        "action": [
+          {
+            "type": "text",
+            "label": "修改",
+            "size": "small",
+            "event": "amend"
+          }],
+        "leftOperation": true
+    },
+    "page": {
+        "layout": "total, sizes, prev, pager, next, jumper",
+        "pageSize": 10,
+        "pageSizes": [10, 20, 30, 50, 100]
+    }
+}

@@ -1,0 +1,185 @@
+{
+    "searchList": {
+        "searchTxt": [
+            {
+                "name": "时间",
+                "value": "time",
+                "unfold": true,
+                "type": "time",
+                "span": 8
+            },
+            {
+                "name": "客户",
+                "value": "customerName",
+                "type": "advance",
+                "unfold": true,
+                "advanceConfig": [
+                    {"prop":"ebcuNameCn","value":"客户名称"},
+                    {"prop":"pmCode","value":"客户编码"}
+                ],
+                "tableConfig": [
+                    { "prop": "pmCode", "value": "客户编码" },
+                    {"prop":"ebcuNameCn","value":"客户名称"}
+                ],
+                "advanceUrl": "/ebCustomer/searchByEbCustomer",
+                "cbParams": ["pmCode#customerCode", "ebcuNameCn#customerName"],
+                "span": 4
+            },
+            {
+                "name": "客户订单号",
+                "value": "custOrderNo",
+                "unfold": true,
+                "span": 4,
+                "type": "input"
+            }
+            
+        ],
+        "unfoldState": false,
+        "advancedBtn": true
+    },
+    "table": {
+        "clickModify": true,
+        "selectBtn": true,
+        "leftWidth": 100,
+        "height": "400px",
+        "columns": [
+            {
+                "label": "客户订单号",
+                "prop": "custOrderNo",
+                "width":200
+            },
+            {
+                "label": "任务号",
+                "prop": "taskNo",
+                "width":140
+            },
+            {
+                "label": "客户",
+                "prop": "customerName",
+                "width":140
+            },
+            {
+                "label": "平台",
+                "prop": "siteName",
+                "width":140
+            },
+            {
+                "label": "仓库",
+                "prop": "whName",
+                "width":140
+            },
+            {
+                "label": "商品编码",
+                "prop": "itemCode",
+                "width":140
+            },
+            {
+                "label": "型号",
+                "prop": "itemClass",
+                "width":140
+            },
+            {
+                "label": "商品状态",
+                "prop": "itemStatus",
+                "type":"select",
+                "optionNum":"O_ITEM_STATUS",
+                "options":[],
+                "width":120
+            },
+            {
+                "label": "订单大类",
+                "prop": "inOutTypeName",
+                "width":120
+            },
+            {
+                "label": "计划数量",
+                "prop": "planQty",
+                "width":80
+            },
+            {
+                "label": "变更数量",
+                "prop": "actQty",
+                "width":80
+            },
+            {
+                "label": "变更时间",
+                "prop": "actTime",
+                "width":180
+            }
+        ]
+    },
+    "page": {
+        "layout": "sizes, prev, pager, next",
+        "pageSize": 10,
+        "pageSizes": [
+            10,
+            20,
+            50,
+            100
+        ]
+    },
+    "searchTotalTitle": [
+        {
+            "name": "分公司/平台",
+            "value": "siteName",
+            "unfold": true,
+            "advanceConfig": [
+                { "prop": "escoCompanyNameCn", "value": "服务平台名称" },
+                { "prop": "escoCompanyNo", "value": "服务平台编码" }
+            ],
+            "tableConfig": [
+                { "prop": "escoCompanyNo", "value": "服务平台编码" },
+                { "prop": "escoCompanyNameCn", "value": "服务平台名称" },
+                { "prop": "branchCompanyNo", "value": "分公司编码" },
+                { "prop": "branchCompanyName", "value": "分公司名称" }
+            ],
+            "advanceUrl": "/searchPlatform",
+            "type": "advance",
+            "cbParams": ["escoCompanyNo#siteCode", "escoCompanyNameCn#siteName"]
+        },
+        {
+            "name": "仓库",
+            "value": "whName",
+            "unfold": true,
+            "advanceConfig": [
+                { "prop": "cdwhName", "value": "仓库名称" },
+                { "prop": "whCode", "value": "仓库编码" }
+            ],
+            "tableConfig": [
+                { "prop": "whCode", "value": "仓库编码" },
+                { "prop": "cdwhName", "value": "仓库名称" }
+            ],
+            "advanceUrl": "cdWarehouse/search?cdwhIsStop=0",
+            "cbParams": [
+                "whCode", "cdwhName#whName"
+            ],
+            "type": "advance",
+            "advanceCascade": "siteCode"
+        },
+        {
+            "name": "商品",
+            "value": "itemName",
+            "unfold": true,
+            "advanceConfig": [
+                { "prop": "cdcmNameCn", "value": "商品名称" },
+                { "prop": "cdcmCustMaterialNo", "value": "客户商品编码" },
+                { "prop": "cdcmMaterialNo", "value": "商品编码" }
+            ],
+            "tableConfig": [
+                { "prop": "cdcmMaterialNo", "value": "商品编码" },
+                { "prop": "cdcmCustMaterialNo", "value": "客户商品编码" },
+                { "prop": "cdcmNameCn", "value": "商品名称" }
+            ],
+            "advanceUrl": "cdCommonMaterial/searchByMaterial",
+            "type": "advance",
+            "cbParams": ["cdcmMaterialNo#itemCode", "cdcmNameCn#itemName"]
+        },
+        {
+            "name": "商品状态",
+            "value": "itemStatus",
+            "type":"select",
+            "optionNum":"O_ITEM_STATUS",
+            "options": []
+        }
+    ]
+}

@@ -1,0 +1,127 @@
+{
+    "searchList": {
+        "searchTxt": [
+            {
+                "name": "客户",
+                "type": "advance",
+                "value": "customerCode",
+                "unfold": true,
+                "span": 4,
+                "advanceConfig": [
+                    { "prop": "ebcuNameCn", "value": "客户名称" },
+                    { "prop": "pmCode", "value": "客户编码" }
+                ],
+                "tableConfig": [
+                    { "prop": "pmCode", "value": "客户编码" },
+                    { "prop": "ebcuNameCn", "value": "客户名称" }
+                ],
+                "advanceUrl": "/ebCustomer/searchByEbCustomer",
+                "cbParams": [
+                    "ebcuNameCn#customerCode"
+                ]
+            },{
+                "name": "仓库",
+                "value": "whCode",
+                "advanceConfig": [
+                    { "prop": "cdwhName", "value": "仓库名称" },
+                    { "prop": "whCode", "value": "仓库编码" }
+
+                ],
+                "tableConfig": [
+                    { "prop": "whCode", "value": "仓库编码" },
+                    { "prop": "cdwhName", "value": "仓库名称" }
+                ],
+                "advanceUrl": "cdWarehouse/search?cdwhIsStop=0",
+                "cbParams": [
+                    "whCode", "cdwhName#whCode"
+                ],
+                "type": "advance",
+                "unfold": true,
+                "span": 4
+            },{
+                "name": "运作模式",
+                "value": "logisitcMode",
+                "type": "select",
+                "unfold": true,
+                "optionNum": "LOGISTIC_MODE",
+                "options": [],
+                "span": 4
+            }],
+        "unfoldState": false,
+        "advancedBtn": false
+    },
+    "table":
+    {
+        "tableCut": true,
+        "clickModify": true,
+        "selectBtn": true,
+        "leftOperation": true,
+        "height": 400,
+        "columns": [
+            {
+                "label": "客户",
+                "prop": "customerCode",
+                "require": true,
+                "mustFill": true,
+                "advanceConfig": [
+                    { "prop": "ebcuNameCn", "value": "客户名称" },
+                    { "prop": "pmCode", "value": "客户编码" }
+                ],
+                "tableConfig": [
+                    { "prop": "pmCode", "value": "客户编码" },
+                    { "prop": "ebcuNameCn", "value": "客户名称" }
+                ],
+                "type": "advance",
+                "advanceUrl": "/ebCustomer/searchByEbCustomer",
+                "cbParams": [
+                    "pmCode", "ebcuNameCn#customerCode"
+                ],
+                "width": 200
+            },
+            {
+                "label": "仓库",
+                "prop": "whCode",
+                "require": true,
+                "mustFill": true,
+                "advanceConfig": [
+                    { "prop": "cdwhName", "value": "仓库名称" },
+                    { "prop": "whCode", "value": "仓库编码" }
+                ],
+                "tableConfig": [
+                    { "prop": "whCode", "value": "仓库编码" },
+                    { "prop": "cdwhName", "value": "仓库名称" }
+                ],
+                "advanceUrl": "cdWarehouse/search?cdwhIsStop=0",
+                "cbParams": [
+                    "whCode", "cdwhName#whCode"
+                ],
+                "type": "advance",
+                "width": 200
+            },
+            {
+                "label": "运作模式",
+                "align": "center",
+                "prop": "logisitcMode",
+                "width": 120,
+                "mustFill": true,
+                "require": true,
+                "type": "select",
+                "optionNum": "LOGISTIC_MODE",
+                "options": []
+            }],
+        "action": [
+            {
+                "type": "text",
+                "label": "编辑",
+                "size": "small",
+                "event": "edit"
+            }
+        ]
+    },
+    "configuration": true,
+    "page": {
+        "layout": "total, sizes, prev, pager, next, jumper",
+        "pageSize": 10,
+        "pageSizes": [10, 20, 50, 100]
+    }
+}

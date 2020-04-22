@@ -1,0 +1,81 @@
+{
+    "table":
+    {
+        "selectBtn": true,
+        "clickState": false,
+        "columns": [
+            {
+                "label": "订单生产编码",
+                "align": "center",
+                "sort": true,
+                "prop": "productCode",
+                "filter": true,
+                "require": true
+            },
+            {
+                "label": "产品描述",
+                "align": "center",
+                "sort": true,
+                "prop": "skuName",
+                "filter": true,
+                "require": true
+            },
+            {
+                "label": "状态",
+                "align": "center",
+                "sort": true,
+                "prop": "status",
+                "filter": true,
+                "require": true
+            },
+            {
+                "label": "分配数",
+                "align": "center",
+                "prop": "",
+                "require": true
+            },
+            {
+                "label": "拣货数",
+                "align": "center",
+                "prop": "",
+                "require": true
+            },
+            {
+                "label": "源库位",
+                "align": "center",
+                "prop": "",
+                "require": true
+            },
+            {
+                "label": "目标库位",
+                "align": "center",
+                "prop": "",
+                "require": true
+            },
+            {
+                "label": "拣货人",
+                "align": "center",
+                "prop": "",
+                "require": true
+            },
+            {
+                "label": "拣货时间",
+                "align": "center",
+                "prop": "",
+                "require": true
+            },
+            {
+                "label": "拣货任务ID",
+                "align": "center",
+                "prop": "",
+                "require": true
+            }],
+        "leftOperation": false
+    },
+    "page": {
+        "layout": "total, sizes, prev, pager, next, jumper",
+        "pageSize": 20,
+        "pageNo": 1,
+        "pageSizes": [10, 20, 30, 50, 100]
+    }
+}

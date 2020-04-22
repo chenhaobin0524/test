@@ -1,0 +1,163 @@
+{
+    "searchList": {
+      "searchTxt": [
+        {
+            "name": "发车单号",
+            "value": "dispatchNo",
+            "type": "input",
+            "unfold": true,
+            "span": 6
+        },
+        {
+            "name": "车牌",
+            "value": "vehicleCard",
+            "type": "advance",
+            "unfold": true,
+            "advanceConfig": [
+                {"prop":"licensePlateNumber","value":"车牌"},
+                {"prop":"cargoVolumeStr","value":"载货体积"},
+                {"prop":"cdegNameCn","value":"车型"}
+            ],
+            "tableConfig": [
+                {"prop":"licensePlateNumber","value":"车牌"},
+                {"prop":"cargoVolume","value":"载货体积"},
+                {"prop":"cdegNameCn","value":"车型"}
+            ],
+            "advanceUrl": "suCar/searchByConditions",
+            "cbParams": ["licensePlateNumber#vehicleCard", "cargoVolumeStr", "cdegNameCn#equipmentName"],
+            "advanceCode": "advanceCode",
+            "span": 6
+        },
+        {
+            "name": "承运商",
+            "value": "planCarrierName",
+            "type": "advance",
+            "unfold": true,
+            "advanceConfig": [
+                {"prop":"suppliersNameCn","value":"承运商名称"},
+                {"prop":"suppliersCode","value":"承运商编码"},
+                {"prop":"tranName","value":"采购渠道"}
+            ],
+            "tableConfig": [
+                {"prop":"suppliersNameCn","value":"承运商名称"},
+                {"prop":"suppliersCode","value":"承运商编码"},
+                {"prop":"tranName","value":"采购渠道"}
+            ],
+            "advanceUrl": "ebSupplier/searchBySupplier",
+            "cbParams": ["suppliersNameCn#planCarrierName","tranName"],
+            "advanceCode": "advanceCode",
+            "span": 6
+        },
+        {
+            "name": "创建时间",
+            "value": "createTime",
+            "startTime": "startCreateTime",
+            "endTime": "endCreateTime",
+            "startPlaceholder": "创建开始日期",
+            "endPlaceholder": "创建结束日期",
+            "type": "time",
+            "unfold": true,
+            "span": 7
+        },{
+            "name": "发车时间",
+            "value": "departureTime",
+            "startTime": "startDispatchTime",
+            "endTime": "endDispatchTime",
+            "startPlaceholder": "发车开始日期",
+            "endPlaceholder": "发车结束日期",
+            "type": "time",
+            "unfold": true,
+            "span": 7
+        }],
+        "unfoldState": false,
+        "advancedBtn": false
+        },
+    "table":
+    {
+        "selectBtn": true,
+        "clickState": false,
+        "height": 300,
+        "columns": [
+            {
+                "label": "车辆信息",
+                "prop": "exportOrgName",
+                "width": 80
+            },
+            {
+                "label": "司机信息",
+                "prop": "subWhCode",
+                "width": 80
+            },
+            {
+                "label": "装载率",
+                "prop": "subWhName",
+                "width": 80
+            },
+            {
+                "label": "始发地",
+                "prop": "whName",
+                "width": 80
+            },
+            {
+                "label": "目的地",
+                "prop": "custMaterialNo",
+                "width": 80
+            },
+            {
+                "label": "里程(Km)",
+                "prop": "productName",
+                "width": 80
+            },
+            {
+                "label": "单量",
+                "prop": "businessName",
+                "width": 80
+            },
+            {
+                "label": "重量(Kg)",
+                "prop": "qty",
+                "width": 80
+            },
+            {
+                "label": "方量(m³)",
+                "prop": "qtyAvalible",
+                "width": 80
+            },
+            {
+                "label": "轨迹",
+                "prop": "qtyAlloc",
+                "width": 80
+            },
+            {
+                "label": "承运商",
+                "prop": "planCarrierName",
+                "width": 80
+            },
+            {
+                "label": "状态",
+                "prop": "dispatchStatus",
+                "width": 80
+            },
+            {
+                "label": "发车时间",
+                "prop": "deptName",
+                "width": 80
+            },
+            {
+                "label": "更新时间",
+                "prop": "deptName",
+                "width": 80
+            },
+            {
+                "label": "创建时间",
+                "prop": "regionName",
+                "width": 80
+            }],
+        "leftOperation": false
+    },
+    "page": {
+        "layout": "total, sizes, prev, pager, next, jumper",
+        "pageSize": 10,
+        "pageSizes": [10, 20, 30, 50, 100]
+    }
+}

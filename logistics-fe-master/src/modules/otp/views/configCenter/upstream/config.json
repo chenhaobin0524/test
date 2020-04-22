@@ -1,0 +1,120 @@
+{
+    "searchList": {
+        "searchTxt": [
+           {
+                "name": "来源系统",
+                "value": "sourceSystem",
+                "type": "select",
+                "unfold": true,
+                "optionNum": "SOURCE_SYSTEM",
+                "options": [],
+                "span": 4
+            },{
+                "name": "订单类型",
+                "value": "orderType",
+                "type": "select",
+                "unfold": true,
+                "optionNum": "ORDER_TYPE",
+                "options": [],
+                "span": 4
+            }],
+        "unfoldState": false,
+        "advancedBtn": false
+    },
+    "table":
+    {
+        "switchType": true,
+        "tableCut": true,
+        "clickModify": true,
+        "selectBtn": true,
+        "leftOperation": true,
+        "height": 400,
+        "statesY": "是",
+        "statesN": "否",
+        "columns": [
+            {
+                "label": "客户",
+                "prop": "customerName",
+                "require": true,
+                "type": "advance",
+                "width": 200,
+                "advanceConfig": [
+                    {"prop":"ebcuNameCn","value":"客户名称"},
+                    {"prop":"pmCode","value":"客户编码"}
+                ],
+                "tableConfig": [
+                    { "prop": "pmCode", "value": "客户编码" },
+                    {"prop":"ebcuNameCn","value":"客户名称"}
+                ],
+                "advanceUrl": "/ebCustomer/searchByEbCustomer",
+                "cbParams": ["pmCode#customerCode", "ebcuNameCn#customerName"],
+                "advanceCode": "advanceCode"
+            },
+            {
+                "label": "来源系统",
+                "prop": "sourceSystem",
+                "require": true,
+                "mustFill": true,
+                "type": "select",
+                "optionNum": "SOURCE_SYSTEM",
+                "options": [],
+                "width": 200
+            },
+            {
+                "label": "订单类型",
+                "prop": "orderType",
+                "require": true,
+                "mustFill": true,
+                "width": 200,
+                "type": "select",
+                "optionNum": "ORDER_TYPE",
+                "options": []
+            },
+            {
+                "label": "是否部分",
+                "prop": "partFlag",
+                "activeValue": "Y",
+                "inactiveValue": "N",
+                "defaultValue": "N",
+                "require": true,
+                "width": 100,
+                "type": "switch"
+            },
+            {
+                "label": "是否分批",
+                "align": "center",
+                "prop": "batchFlag",
+                "activeValue": "Y",
+                "inactiveValue": "N",
+                "defaultValue": "N",
+                "require": true,
+                "type": "switch",
+                "width": 100
+            },
+            {
+                "label": "是否反馈上游",
+                "align": "center",
+                "prop": "confirmFlag",
+                "activeValue": "Y",
+                "inactiveValue": "N",
+                "defaultValue": "N",
+                "require": true,
+                "type": "switch",
+                "width": 100
+            }],
+        "action": [
+            {
+                "type": "text",
+                "label": "编辑",
+                "size": "small",
+                "event": "edit"
+            }
+        ]
+    },
+    "configuration": true,
+    "page": {
+        "layout": "total, sizes, prev, pager, next, jumper",
+        "pageSize": 10,
+        "pageSizes": [10, 20, 50, 100]
+    }
+}

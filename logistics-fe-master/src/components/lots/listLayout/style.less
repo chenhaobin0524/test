@@ -1,0 +1,38 @@
+.list-layout {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .list-header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        .el-input {
+            width: 170px;
+            margin-left: 10px;
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+    .el-select + .el-select,
+    .el-input__inner + .el-select,
+    .el-input + .el-select,
+    .el-select + .el-button,
+    .el-input__inner + .el-button,
+    .el-input + .el-button {
+        margin-left: 10px;
+    }
+    .list-main {
+        margin-bottom: 10px;
+        overflow: hidden;
+        flex: 1 auto;
+    }
+    .list-footer {
+        width: 100%;
+        bottom: 2px;
+        left: 0;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: flex-end;
+    }
+}

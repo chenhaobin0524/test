@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>美的(midea)</title>
+    <script type="text/javascript">
+      function getSearchParams(str) {
+        var obj = {};
+        const arr = str.split('&');
+        for (var i of arr){
+          if (i.indexOf('=') === -1) {
+            return {}
+          }
+          var keyValue = i.split('=');
+          obj[keyValue[0]] = keyValue[1];
+        }
+        return obj
+      }
+      function spliceParams(data) { // 接收一个对象进行拼接
+        var url = '';
+        for (var i in data) {
+          if (i !== 'ticket' && data[i] !== undefined) {
+            url += '&' + i + '=' + encodeURIComponent(data[i]);
+          }
+        }
+        return url ? url.substring(1) : '' // url存在则切割掉第一个&
+      }
+      if (location.search && location.search.indexOf('?') === 0) {
+        var obj = getSearchParams(location.search.substring(1));
+        var paramsURL = spliceParams(obj) ? '?' + spliceParams(obj) : '';
+        location.replace(location.origin + location.pathname + paramsURL + location.hash);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+    <!-- Matomo -->
+    <script type="text/javascript">
+    var _paq = _paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="https://kunp.midea.com/analysis/";
+      _paq.push(['setTrackerUrl', u+'piwik.php']);
+      _paq.push(['setSiteId', '4']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+    })();
+    </script>
+    <script src="<%= BASE_URL %>webPerformance.js">
+    </script>
+    <!-- End Matomo Code -->
+  </body>
+</html>

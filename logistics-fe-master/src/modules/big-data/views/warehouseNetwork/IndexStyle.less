@@ -1,0 +1,353 @@
+.warehouse-network {
+    background-color: #284680;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    .left-menu {
+        position: relative;
+        float: left;
+        height: 100%;
+        width: 3.5rem;
+    }
+    .menu-img {
+        display: block;
+    }
+    .menu-desc {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: #fff;
+        position:absolute;
+        width:100%;
+        height:100%;
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+    .right-content {
+        float: left;
+        margin: 1.6rem 1.2rem;
+        width: calc(100% - 5.9rem);
+        height: 95%;
+        box-sizing: border-box;
+    }
+    .warehouse,
+    .transport {
+        float: left;
+        width: 49.3%;
+        background-color: #243C70;
+        height: 100%;
+        border: 1px solid #243C70;
+        border-radius: 0.6rem;
+        box-sizing: border-box;
+        padding: 1.6rem 1.2rem;
+    }
+    .warehouse {
+        margin-right: 1.2rem;
+    }
+    .title {
+        box-sizing: border-box;
+        width: 100%;
+        height: 2rem;
+        line-height: 2rem;
+        color: #fff;
+        font-size: 1.6rem;
+    }
+    .title-logo {
+        float: left;
+    }
+    .title-desc {
+        display: block;
+        float: left;
+        margin: 0 0 0.8rem 1rem;
+        font-family: "founder-lanting";
+    }
+    .warehouse-up,
+    .warehouse-middle,
+    .transport-up,
+    .transport-middle {
+        box-sizing: border-box;
+        height: 13rem;
+        width: 100%;
+        margin-top: 1.2rem;
+    }
+    .warehouse-down,
+    .transport-down {
+        position: relative;
+        border-radius: 0.4rem;
+        box-sizing: border-box;
+        height: calc(100% - 31.6rem);
+        margin-top: 1.2rem;
+        width: 100%;
+        overflow: hidden;
+
+    }
+    .warehouse-down {
+        background-color: #1F3E81;
+    }
+    .transport-down {
+        background-color: #223B72;
+    }
+    .warehouse-down {
+        padding: 0.8rem 0.8rem 0 0.8rem;
+    }
+    .gauge-title {
+        width: 100%;
+        height: 13%;
+        font-family: "founder-lanting";
+        font-size: 1.3rem;
+        color: #fff;
+        padding: 0.8rem 0 0 0.6rem;
+    }
+    .gauge1 {
+        width: 100%;
+        height: 83%;
+    }
+    .bgc-blue {
+        float: left;
+        height: 100%;
+        border: 1px solid #1F3E81;
+        border-radius: 0.4rem;
+        box-sizing: border-box;
+        background-color: #1F3E81;
+        overflow: hidden;
+    }
+    .warehouse-up-left {
+        width: 46%;
+        margin-right: 1.2rem;
+        .amount-cs {
+            width: 46%;
+        }
+    }
+    .warehouse-middle-left {
+        width: 46%;
+        margin-right: 1.2rem;
+    }
+    .amount-cs,
+    .amount-truck {
+        float: left;
+        width: 50%;
+        height: 100%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    .amount-cs-up,
+    .amount-truck-up,
+    .amount-cs-down,
+    .amount-truck-down {
+        padding-top: 2rem;
+        box-sizing: border-box;
+        width: 100%;
+        height: 50%;
+    }
+    .amount-cs-up,
+    .amount-truck-up {
+        margin-bottom: -0.8rem;
+    }
+    .amount-num {
+        font-family: "founder-lanting";
+        color: #03FDFD;
+        letter-spacing: 0;
+        text-align: center;
+        font-size: 1.56rem;
+        margin-bottom: 0.6rem;
+    }
+    .amount-desc,
+    .pie-desc {
+        opacity: 0.7;
+        font-family: "founder-lanting";
+        font-size: 0.9rem;
+        color: #fff;
+        text-align: center;
+    }
+    .warehouse-up-right {
+        width: 51.5%;
+    }
+    .warehouse-middle-right {
+        width: 51.5%;
+        padding: 1rem;
+        .amount-num {
+            color: #00CAFF;
+        }
+        .amount-cs-up,
+        .amount-truck-up {
+            padding-top: 0.94rem;
+        }
+        .amount-cs-down,
+        .amount-truck-down {
+            padding-top: 1.9rem;
+        }
+    }
+
+    .pie-one,
+    .pie-two,
+    .pie-three {
+        float: left;
+        width: 33.3%;
+        height: 100%;
+        padding-top: 1.5rem;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    .warehouse-down-left {
+        float: left;
+        width: 28%;
+        height: 100%;
+    }
+    .warehouse-down-right {
+        float: left;
+        width: 72%;
+        height: 100%;
+    }
+    .transport-up,
+    .transport-middle {
+        background-color: #1F3E81;
+        border: 1px solid #1F3E81;
+        border-radius: 0.4rem;
+        overflow: hidden;
+    }
+    .transport-middle {
+        padding: 2rem 0;
+    }
+    .transport-up-left {
+        float: left;
+        width: 42%;
+        height: 100%;
+    }
+    .pie-four,
+    .pie-five {
+        float: left;
+        box-sizing: border-box;
+        width: 50%;
+        height: 100%;
+        padding-top: 1.5rem;
+        text-align: center;
+    }
+    .transport-up-right {
+        box-sizing: border-box;
+        float: left;
+        width: 58%;
+        height: 100%;
+    }
+    .liquidFill-one,
+    .liquidFill-two,
+    .liquidFill-three,
+    .liquidFill-four {
+        width: 24%;
+        height: 100%;
+        box-sizing: border-box;
+        float: left;
+        text-align: center;
+        font-family: "founder-lanting";
+        font-size: 0.9rem;
+        color: #fff;
+
+    }
+    .liquid-desc {
+        opacity: 0.7;
+    }
+    .first,
+    .second,
+    .third,
+    .forth {
+        width: 25%;
+        height: 100%;
+        float: left;
+        box-sizing: border-box;
+        padding-top: 1.4rem;
+        text-align: center;
+    }
+    .first,
+    .second,
+    .third {
+        border-right: 1px solid rgba(255, 255, 255, .1);
+    }
+    .transport-num {
+        font-family: "founder-lanting";
+        color: #03FDFD;
+        letter-spacing: 0;
+        text-align: center;
+        font-size: 1.8rem;
+        font-weight: 400;
+        margin-bottom: 1.8rem;
+    }
+    .transport-desc {
+        opacity: 0.7;
+        font-family: "founder-lanting";
+        font-size: 0.9rem;
+        color: #fff;
+        text-align: center;
+    }
+    .map-legend1,
+    .map-legend2,
+    .map-legend3 {
+        box-sizing: border-box;
+        width: 7rem;
+        height: 1.6rem;
+        position: absolute;
+        right: 0;
+        line-height: 0.9rem;
+        font-family: "founder-lanting";
+        font-size: 0.8rem;
+        color: #fff;
+    }
+    .map-legend1 {
+        top: 1rem;
+    }
+    .map-legend2 {
+        top: 3rem;
+    }
+    .map-legend3 {
+        top: 5rem;
+    }
+    .map-legend1-color,
+    .map-legend2-color,
+    .map-legend3-color {
+        width: 0.8rem;
+        height: 0.8rem;
+        float: left;
+        margin-right: 0.5rem;
+        border-radius: 0.2rem;
+    }
+    .map-legend1-color {
+        background-color: #FF5956;
+    }
+    .map-legend2-color {
+        background-color: #2AC9BB;
+    }
+    .map-legend3-color {
+        background-color: #EAB43B;
+    }
+    .warning-text {
+        position: absolute;
+        box-sizing: border-box;
+        width: 9rem;
+        height: 10rem;
+        left: 1.2rem;
+        top: 1.1rem;
+        z-index: 10;
+    }
+    .warning-text-title,
+    .warning-text-num,
+    .warning-text-desc {
+        display: block;
+    }
+    .warning-text-title {
+        font-family: "founder-lanting";
+        font-size: 1.3rem;
+        color: #fff;
+        margin-bottom: 1.6rem;
+    }
+    .warning-text-num {
+        font-family: "founder-lanting";
+        font-size: 2rem;
+        color: #FF5956 ;
+        margin-bottom: 0.5rem;
+    }
+    .warning-text-desc {
+        font-family: "founder-lanting";
+        font-size: 0.9rem;
+        color: #fff;
+    }
+}
