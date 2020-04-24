@@ -1,0 +1,276 @@
+{
+    "configuration": true,
+    "searchList": {
+        "searchTxt": [
+            {
+                "name": "客户",
+                "value": "customerName",
+                "type": "advance",
+                "unfold": true,
+                "advanceConfig": [
+                    {"prop":"ebcuNameCn","value":"客户名称"},
+                    {"prop":"pmCode","value":"客户编码"}
+                ],
+                "tableConfig": [
+                    { "prop": "pmCode", "value": "客户编码" },
+                    {"prop":"ebcuNameCn","value":"客户名称"}
+                ],
+                "advanceUrl": "/ebCustomer/searchByEbCustomer",
+                "cbParams": ["pmCode#customerCode", "ebcuNameCn#customerName"],
+                "advanceCode": "advanceCode",
+                "span": 4
+            },
+            {
+                "name": "平台",
+                "value": "siteName",
+                "unfold": true,
+                "advanceConfig": [
+                    { "prop": "escoCompanyNameCn", "value": "服务平台名称" },
+                    { "prop": "escoCompanyNo", "value": "服务平台编码" }
+                ],
+                "tableConfig": [
+                    { "prop": "escoCompanyNo", "value": "服务平台编码" },
+                    { "prop": "escoCompanyNameCn", "value": "服务平台名称" },
+                    { "prop": "branchCompanyNo", "value": "分公司编码" },
+                    { "prop": "branchCompanyName", "value": "分公司名称" }
+                ],
+                "advanceUrl": "/searchPlatform",
+                "type": "advance",
+                "cbParams": ["escoCompanyNo#siteCode", "escoCompanyNameCn#siteName"],
+                "span": 4
+            },
+            {
+                "name": "仓库",
+                "value": "whName",
+                "unfold": true,
+                "advanceConfig": [
+                    { "prop": "cdwhName", "value": "仓库名称" },
+                    { "prop": "whCode", "value": "仓库编码" }
+                ],
+                "tableConfig": [
+                    { "prop": "whCode", "value": "仓库编码" },
+                    { "prop": "cdwhName", "value": "仓库名称" }
+                ],
+                "advanceUrl": "cdWarehouse/search?cdwhIsStop=0",
+                "cbParams": [
+                    "whCode", "cdwhName#whName"
+                ],
+                "type": "advance",
+                "advanceCascade": "siteCode",
+                "span": 4
+            }
+        ],
+        "unfoldState": false,
+        "advancedBtn": true
+    },
+    "table": {
+        "tableCut": true,
+        "clickModify": true,
+        "selectBtn": true,
+        "leftOperation": true,
+        "height":400,
+        "statesY": "是",
+        "statesN": "否",
+        "switchType": true,
+        "columns": [
+            {
+                "label": "来源系统",
+                "prop": "orderSystem",
+                "require": true,
+                "mustFill": true,
+                "width": 120,
+                "type":"select",
+                "optionNum":"SOURCE_SYSTEM",
+                "options":[]
+            },
+            {
+                "label": "业务模式",
+                "prop": "businessMode",
+                "require": true,
+                "width": 120,
+                "type": "select",
+                "optionNum":"BUSINESS_MODE",
+                "options": []
+            },
+            {
+                "label": "订单类型",
+                "prop": "orderType",
+                "require": true,
+                "width": 120,
+                "type": "select",
+                "optionNum":"ORDER_TYPE",
+                "options": []
+            },
+            {
+                "label": "平台",
+                "prop": "siteName",
+                "require": true,
+                "width": 200,
+                "advanceConfig": [
+                    { "prop": "escoCompanyNameCn", "value": "服务平台名称" },
+                    { "prop": "escoCompanyNo", "value": "服务平台编码" }
+                ],
+                "tableConfig": [
+                    { "prop": "escoCompanyNo", "value": "服务平台编码" },
+                    { "prop": "escoCompanyNameCn", "value": "服务平台名称" },
+                    { "prop": "branchCompanyNo", "value": "分公司编码" },
+                    { "prop": "branchCompanyName", "value": "分公司名称" }
+                ],
+                "advanceUrl": "/searchPlatform",
+                "type": "advance",
+                "cbParams": ["escoCompanyNo#siteCode", "escoCompanyNameCn#siteName"]
+            },
+            {
+                "label": "客户",
+                "prop": "customerName",
+                "require": true,
+                "type": "advance",
+                "width": 200,
+                "advanceConfig": [
+                    {"prop":"ebcuNameCn","value":"客户名称"},
+                    {"prop":"pmCode","value":"客户编码"}
+                ],
+                "tableConfig": [
+                    { "prop": "pmCode", "value": "客户编码" },
+                    {"prop":"ebcuNameCn","value":"客户名称"}
+                ],
+                "advanceUrl": "/ebCustomer/searchByEbCustomer",
+                "cbParams": ["pmCode#customerCode", "ebcuNameCn#customerName"],
+                "advanceCode": "advanceCode"
+            },
+            {
+                "label": "仓库",
+                "prop": "whName",
+                "require": true,
+                "width": 200,
+                "advanceConfig": [
+                    { "prop": "cdwhName", "value": "仓库名称" },
+                    { "prop": "whCode", "value": "仓库编码" }
+                ],
+                "tableConfig": [
+                    { "prop": "whCode", "value": "仓库编码" },
+                    { "prop": "cdwhName", "value": "仓库名称" }
+                ],
+                "advanceUrl": "cdWarehouse/search?cdwhIsStop=0",
+                "cbParams": [
+                    "whCode", "cdwhName#whName"
+                ],
+                "type": "advance",
+                "advanceCascade": "siteCode#site_code"
+            },
+            {
+                "label": "是否走MIP",
+                "align": "center",
+                "prop": "adjustMipFlag",
+                "activeValue": 1,
+                "inactiveValue": 0,
+                "defaultValue": 1,
+                "require": true,
+                "type": "switch",
+                "width": 100
+            },
+            {
+                "label": "是否拆单",
+                "prop": "apartFlag",
+                "require": true,
+                "width": 120,
+                "type": "select",
+                "options": [
+                    {"value": "Y", "label": "是"}, {"value": "N", "label": "否"}, {"value": "UNALLOWED", "label": "不允许"}
+                ]
+            },
+            {
+                "label": "是否自动分仓",
+                "align": "center",
+                "prop": "compartFlag",
+                "activeValue": "Y",
+                "inactiveValue": "N",
+                "defaultValue": "N",
+                "require": true,
+                "type": "switch",
+                "width": 100
+            }
+        ],
+        "action": [
+            {
+                "type": "text",
+                "label": "编辑",
+                "size": "small",
+                "event": "edit"
+            }
+        ]
+    },
+    "page": {
+        "layout": "total, sizes, prev, pager, next, jumper",
+        "pageSize": 10,
+        "pageSizes": [
+            10,
+            20,
+            50,
+            100
+        ]
+    },
+    "action": [
+        {
+            "type": "text",
+            "label": "编辑",
+            "size": "small",
+            "event": "edit"
+        }
+    ],
+    "searchTotalTitle": [
+        {
+            "name": "来源系统",
+            "value": "orderSystem",
+            "type":"select",
+            "optionNum":"SOURCE_SYSTEM",
+            "options":[]
+        },
+        {
+            "name": "订单类型",
+            "value": "orderType",
+            "type":"select",
+            "optionNum":"ORDER_TYPE",
+            "options": []
+        },
+        {
+            "name": "业务模式",
+            "value": "businessMode",
+            "type": "select",
+            "optionNum":"BUSINESS_MODE",
+            "options": []
+        },
+        {
+            "name": "是否自动拆单",
+            "align": "center",
+            "value": "apartFlag",
+            "type": "select",
+            "options":[
+                {
+                    "label":"是",
+                    "value":"Y"
+                },
+                {
+                    "label":"否",
+                    "value":"N"
+                }
+            ]
+        },
+        {
+            "name": "是否自动分仓",
+            "align": "center",
+            "value": "compartFlag",
+            "type": "select",
+            "options":[
+                {
+                    "label":"是",
+                    "value":"Y"
+                },
+                {
+                    "label":"否",
+                    "value":"N"
+                }
+            ]
+        }
+    ]
+}

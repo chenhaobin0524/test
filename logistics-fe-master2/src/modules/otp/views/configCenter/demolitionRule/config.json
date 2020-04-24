@@ -1,0 +1,91 @@
+{
+    "configuration": true,
+    "searchList": {
+        "searchTxt": [
+            {
+                "name": "订单类型",
+                "value":"orderType",
+                "unfold": true,
+                "type": "select",
+                "optionNum": "ORDER_TYPE",
+                "options": [],
+                "span": 4
+            },
+            {
+                "name": "拆单条件",
+                "value":"apartType",
+                "unfold": true,
+                "type": "select",
+                "optionNum": "APART_TYPE",
+                "options": [],
+                "span": 4
+            }
+        ],
+        "unfoldState": false
+    },
+    "table": {
+        "tableCut": true,
+        "clickModify": true,
+        "selectBtn": true,
+        "height": 400,
+        "leftWidth":100,
+        "leftOperation": true,
+        "columns": [
+            {
+                "label": "来源系统",
+                "prop": "sourceSystem",
+                "require": true,
+                "mustFill": true,
+                "width": 120,
+                "type": "select",
+                "optionNum": "SOURCE_SYSTEM",
+                "options": []
+            },
+            {
+                "label": "订单类型",
+                "prop": "orderType",
+                "require": true,
+                "mustFill": true,
+                "width": 120,
+                "type": "select",
+                "optionNum": "ORDER_TYPE",
+                "options": []
+            },
+            {
+                "label": "拆单条件",
+                "prop": "apartType",
+                "require": true,
+                "mustFill": true,
+                "width": 120,
+                "type": "select",
+                "optionNum": "APART_TYPE",
+                "options": []
+            },
+            {
+                "label": "默认值",
+                "prop": "volume",
+                "require": true,
+                "width": 100,
+                "type": "text"
+            }
+        ],
+        "action": [
+            {
+                "type": "text",
+                "label": "编辑",
+                "size": "small",
+                "event": "edit"
+            }
+        ]
+    },
+    "page": {
+        "layout": "total, sizes, prev, pager, next, jumper",
+        "pageSize": 10,
+        "pageSizes": [
+            10,
+            20,
+            50,
+            100
+        ]
+    }
+}

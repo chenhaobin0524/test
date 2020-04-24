@@ -1,0 +1,109 @@
+{
+    "configuration": true,
+    "searchList": {
+        "searchTxt": [
+            {
+                "name": "始发地名称",
+                "value": "startAddressCode",
+                "unfold": true,
+                "filterable":true,
+                "changeOnSelect":true,
+                "type":"addressSelect",
+                "config": {
+                    "checkStrictly": true
+                },
+                "span": 4
+            },
+            {
+                "name": "目的地名称",
+                "value": "endAddressCode",
+                "unfold": true,
+                "changeOnSelect":true,
+                "type":"addressSelect",
+                "config": {
+                    "checkStrictly": true
+                },
+                "span": 4
+            }
+        ],
+        "unfoldState": false
+    },
+    "table": {
+        "clickModify": true,
+        "selectBtn": true,
+        "tableCut":true,
+        "leftOperation": true,
+        "leftWidth": 80,
+        "height": 400,
+        "columns": [
+            {
+                "label": "起始地级别",
+                "prop": "startLevel",
+                "require": true,
+                "mustFill": true,
+                "width": 120,
+                "type":"select",
+                "optionNum":"place_type",
+                "options":[]
+            },
+            {
+                "label": "始发地",
+                "prop": "startAddressCode",
+                "labelCn":"startAddressName",
+                "require": true,
+                "mustFill":true,
+                "width": 120,
+                "changeOnSelect":true,
+                "minLayers": 3,
+                "type":"addressSelect"
+            },
+            {
+                "label": "目的地级别",
+                "prop": "endLevel",
+                "require": true,
+                "mustFill":true,
+                "width": 120,
+                "type":"select",
+                "optionNum":"place_type",
+                "options":[]
+            },
+            {
+                "label": "目的地",
+                "prop": "endAddressCode",
+                "labelCn":"endAddressName",
+                "mustFill":true,
+                "changeOnSelect":true,
+                "require": true,
+                "width": 120,
+                "minLayers": 3,
+                "type":"addressSelect"
+            },
+            {
+                "label": "里程",
+                "prop": "mileage",
+                "mustFill":true,
+                "require": true,
+                "width": 100,
+                "type": "text"
+            }
+        ],
+        "action": [
+            {
+                "type": "text",
+                "label": "编辑",
+                "size": "small",
+                "event": "edit"
+            }
+        ]
+    },
+    "page": {
+        "layout": "total, sizes, prev, pager, next, jumper",
+        "pageSize": 10,
+        "pageSizes": [
+            10,
+            20,
+            50,
+            100
+        ]
+    }
+}

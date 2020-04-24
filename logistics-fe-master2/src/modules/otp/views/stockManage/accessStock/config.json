@@ -1,0 +1,179 @@
+{
+    "searchList": {
+        "searchTxt": [
+            {
+                "name": "客户订单号",
+                "value": "customerOrderNo",
+                "unfold": true,
+                "span": 4,
+                "type": "input"
+            },
+            {
+                "name": "订单类型",
+                "value": "orderType",
+                "unfold": true,
+                "filterable": true,
+                "span": 4,
+                "type":"select",
+                "optionNum":"ORDER_TYPE",
+                "options": []
+            },
+            {
+                "name": "创建时间",
+                "value": "createTime",
+                "type": "time",
+                "unfold": true,
+                "timeNum": 30,
+                "span": 7
+            }
+            
+        ],
+        "unfoldState": false
+    },
+    "table": {
+        "clickModify": true,
+        "selectBtn": true,
+        "height": 400,
+        "columns": [
+            {
+                "label": "订单号",
+                "prop": "orderNo",
+                "width":200
+            },
+            {
+                "label": "客户订单号",
+                "prop": "customerOrderNo",
+                "width":180
+            },
+            {
+                "label": "运单号",
+                "prop": "waybillNo",
+                "width":180
+            },
+            {
+                "label": "订单来源平台",
+                "prop": "orderSourcePlatform",
+                "width":140
+            },
+            {
+                "label": "来源系统",
+                "prop": "sourceSystem",
+                "width":140
+            },
+            {
+                "label": "上游仓库编码",
+                "prop": "upperWhCode",
+                "width":140
+            },
+            {
+                "label": "上游客户编码",
+                "prop": "upperCustomerCode",
+                "width":140
+            },
+            {
+                "label": "上游订单类型",
+                "prop": "upperOrderType",
+                "width":140
+            },
+            {
+                "label": "承运商编码",
+                "prop": "carrierCode",
+                "width":140
+            },
+            {
+                "label": "承运商名称",
+                "prop": "carrierName",
+                "width":180
+            },
+            {
+                "label": "发送方代码",
+                "prop": "sender",
+                "width":180
+            },
+            {
+                "label": "接收方代码",
+                "prop": "receiver",
+                "width":180
+            },
+            {
+                "label": "状态",
+                "prop": "orderStatusName",
+                "width":180
+            },
+            {
+                "label": "数据同步结果",
+                "prop": "confirmFlagName",
+                "width":180
+            },
+            {
+                "label": "主键",
+                "prop": "transId",
+                "width":180
+            },
+            {
+                "label": "处理信息",
+                "prop": "errMsg",
+                "width":180
+            },
+            {
+                "label": "订单类型",
+                "prop": "orderTypeName",
+                "width":180
+            },
+            {
+                "label": "订单关联ID",
+                "prop": "referenceId",
+                "width":180
+            },
+            {
+                "label": "实体",
+                "prop": "entityId",
+                "width":180
+            },
+            {
+                "label": "创建时间",
+                "prop": "createTime",
+                "width":180
+            },
+            {
+                "label": "总数量",
+                "prop": "totalQty",
+                "width":180
+            },
+            {
+                "label": "任务号",
+                "prop": "taskNo",
+                "width":180
+            },
+            {
+                "label": "客户",
+                "prop": "customerName",
+                "width":180
+            },
+            {
+                "label": "仓库",
+                "prop": "whName",
+                "width":180
+            },
+            {
+                "label": "协同类型",
+                "prop": "joinType",
+                "width":180
+            },
+            {
+                "label": "消息类型",
+                "prop": "messageType",
+                "width":180
+            }
+        ]
+    },
+    "page": {
+        "layout": "sizes,prev, pager, next",
+        "pageSize": 10,
+        "pageSizes": [
+            10,
+            20,
+            50
+        ]
+    }
+}

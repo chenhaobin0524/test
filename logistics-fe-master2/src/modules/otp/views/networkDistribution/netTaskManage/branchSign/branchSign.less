@@ -1,0 +1,90 @@
+.sign-confirm-dialog {
+    .el-input-number--mini {
+        width: 100%;
+    }
+    .red {
+        font-weight: 700;
+        color: red;
+    }
+    .signContent {
+        display: flex;
+    }
+    .receiveLeft {
+        min-width: 550px;
+        position: relative;
+        text-align: center;
+
+        .receive-imgs {
+            width: 100%;
+            height: 100%;
+        }
+        .loadingBox {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            z-index: 1000;
+            .progress {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+    .receiveRight {
+        padding-left: 10px;
+        flex: 1;
+        overflow: hidden;
+        .el-form {
+            margin-bottom: 20px;
+        }
+        .el-form-item {
+            margin-bottom: 0;
+            margin-right: 0;
+            .receipt-name {
+                width: 100px;
+            }
+        }
+        #myLotsSelect {
+            width: 120px;
+        }
+    }
+    .el-table--border {
+        border: none;
+    }
+    .el-table__row {
+        td:first-child {
+            border-left: 1px solid #EBEEF5;
+        }
+    }
+    .has-gutter {
+        th:first-child {
+            border-left: 1px solid #EBEEF5;
+        }
+        th {
+            border-top: 1px solid #EBEEF5;
+        }
+    }
+    .uploader {
+        padding-top: 15px;
+
+        > div {
+            display: inline-block;
+        }
+        .pictures {
+            border-radius: 4px;
+            border: 1px dashed #00bcbf;
+            color: #00bcbf;
+            width: 20px;
+            line-height: 20px;
+        }
+        > i {
+            cursor: pointer;
+            color: #00bcbf;
+            font-size: 22px;
+            vertical-align: middle;
+            margin-left: 45px;
+        }
+    }
+}

@@ -1,0 +1,107 @@
+{
+    "props":
+    {
+        "columns": [
+        {
+            "title": "属性",
+            "width": 160,
+            "key": "prop"
+        },
+        {
+            "title": "说明",
+            "key": "note"
+        },
+        {
+            "title": "类型",
+            "width": 160,
+            "key": "type"
+        },
+        {
+            "title": "默认值",
+            "width": 160,
+            "key": "default"
+        }],
+        "data": [
+        {
+            "prop": "value",
+            "note": "初始化已选数据，如果表格为单选，则传对象，如果为多选，则传数组",
+            "type": "Object | Array",
+            "default": "-"
+        },
+        {
+            "prop": "bind-props",
+            "note": "要初始化已选数据时有效，绑定初始化已选数据的属性，如：{ label: 'name', value: 'id' }",
+            "type": "Object",
+            "default": "{ label: 'label', value: 'value' }"
+        },
+        {
+            "prop": "columns",
+            "note": "下拉表格的列配置",
+            "type": "Array",
+            "default": "-"
+        },
+        {
+            "prop": "data",
+            "note": "下拉表格的数据",
+            "type": "Array",
+            "default": "-"
+        },
+        {
+            "prop": "total",
+            "note": "下拉表格数据的总条数",
+            "type": "Number",
+            "default": "0"
+        },
+        {
+            "prop": "page-size-opts",
+            "note": "下拉表格每页多少条的选项配置",
+            "type": "Array",
+            "default": "[5, 10, 20]"
+        },
+        {
+            "prop": "single-select",
+            "note": "下拉表格是否单选",
+            "type": "Boolean",
+            "default": "false"
+        }]
+    },
+    "events":
+    {
+        "columns": [
+        {
+            "title": "事件名",
+            "key": "event",
+            "width": 180
+        },
+        {
+            "title": "说明",
+            "key": "note"
+        },
+        {
+            "title": "返回值",
+            "key": "return",
+            "width": 400
+        }],
+        "data": [
+        {
+            "event": "on-change",
+            "note": "表格选中项改变时触发",
+            "return": "selection: 已选中项数据"
+        },
+        {
+            "event": "on-page-change",
+            "note": "表格当前页改变时触发",
+            "return": "page: 当前页；pageSize：每页多少条；keyword：搜索关键字"
+        },
+        {
+            "event": "on-page-size-change",
+            "note": "表格每页多少条改变时触发",
+            "return": "page: 当前页；pageSize：每页多少条；keyword：搜索关键字"
+        },
+        {
+            "event": "on-search",
+            "note": "点击搜索按钮时触发",
+            "return": "page: 当前页；pageSize：每页多少条；keyword：搜索关键字"
+        }]
+    }
+}

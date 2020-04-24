@@ -1,0 +1,140 @@
+{
+    "configuration": true,
+    "searchList": {
+        "searchTxt": [
+            {
+                "name": "订单类型",
+                "value": "orderType",
+                "type": "select",
+                "unfold": true,
+                "span": 4,
+                "optionNum":"ORDER_TYPE",
+                "options": []
+            },
+            {
+                "name": "平台",
+                "value": "platform",
+                "unfold": true,
+                "advanceConfig": [
+                    { "prop": "escoCompanyNameCn", "value": "服务平台名称" },
+                    { "prop": "escoCompanyNo", "value": "服务平台编码" }
+                ],
+                "tableConfig": [
+                    { "prop": "escoCompanyNo", "value": "服务平台编码" },
+                    { "prop": "escoCompanyNameCn", "value": "服务平台名称" },
+                    { "prop": "branchCompanyNo", "value": "分公司编码" },
+                    { "prop": "branchCompanyName", "value": "分公司名称" }
+                ],
+                "advanceUrl": "/searchPlatform",
+                "type": "advance",
+                "cbParams": ["escoCompanyNo#siteCode", "escoCompanyNameCn#platform"],
+                "span": 4
+            }
+        ],
+        "unfoldState": false
+    },
+    "table": {
+        "clickModify": true,
+        "tableCut": true,
+        "selectBtn": true,
+        "leftOperation": true,
+        "height": 400,
+        "columns": [
+            {
+                "label": "客户",
+                "prop": "customerName",
+                "require":true,
+                "mustFill":true,
+                "type": "advance",
+                "width": 200,
+                "advanceConfig": [
+                    {"prop":"ebcuNameCn","value":"客户名称"},
+                    {"prop":"pmCode","value":"客户编码"}
+                ],
+                "tableConfig": [
+                    { "prop": "pmCode", "value": "客户编码" },
+                    {"prop":"ebcuNameCn","value":"客户名称"}
+                ],
+                "advanceUrl": "/ebCustomer/searchByEbCustomer",
+                "cbParams": ["pmCode#customerCode", "ebcuNameCn#customerName"],
+                "advanceCode": "advanceCode"
+            },
+            {
+                "label": "平台",
+                "prop": "siteName",
+                "require":true,
+                "mustFill":true,
+                "width": 200,
+                "advanceConfig": [
+                    { "prop": "escoCompanyNameCn", "value": "服务平台名称" },
+                    { "prop": "escoCompanyNo", "value": "服务平台编码" }
+                ],
+                "tableConfig": [
+                    { "prop": "escoCompanyNo", "value": "服务平台编码" },
+                    { "prop": "escoCompanyNameCn", "value": "服务平台名称" },
+                    { "prop": "branchCompanyNo", "value": "分公司编码" },
+                    { "prop": "branchCompanyName", "value": "分公司名称" }
+                ],
+                "advanceUrl": "/searchPlatform",
+                "type": "advance",
+                "cbParams": ["escoCompanyNo#siteCode", "escoCompanyNameCn#siteName"]
+            },
+            {
+                "label": "订单类型",
+                "prop": "orderType",
+                "require":true,
+                "mustFill":true,
+                "width": 150,
+                "filter": true,
+                "type": "select",
+                "optionNum":"ORDER_TYPE",
+                "options": []
+            },
+            {
+                "label": "件数",
+                "require":true,
+                "mustFill":true,
+                "prop": "qty",
+                "width": 120
+            },
+            {
+                "label": "方量",
+                "require":true,
+                "mustFill":true,
+                "prop": "volume",
+                "width": 120,
+                "type": "text"
+            },
+            {
+                "label": "数据版本",
+                "prop": "version",
+                "width": 120,
+                "type": "text"
+            },
+            {
+                "label": "修改人员",
+                "prop": "updateUserCode",
+                "type": "text",
+                "width": 120
+            }
+        ],
+        "action": [
+            {
+                "type": "text",
+                "label": "编辑",
+                "size": "small",
+                "event": "edit"
+            }
+        ]
+    },
+    "page": {
+        "layout": "total, sizes, prev, pager, next, jumper",
+        "pageSize": 10,
+        "pageSizes": [
+            10,
+            20,
+            50,
+            100
+        ]
+    }
+}

@@ -1,0 +1,101 @@
+{
+    "searchList": {
+      "searchTxt": [
+        {
+          "name": "组织架构",
+          "value": "",
+          "type": "cascader",
+          "unfold": true,
+          "span": 4
+        },{
+          "name": "搜索仓库",
+          "value": "",
+          "type": "input",
+          "unfold": true,
+          "span": 3
+        },{
+          "name": "输入地点编码",
+          "value": "",
+          "type": "input",
+          "unfold": true,
+          "span": 3
+        },{
+          "name": "创建日期",
+          "value": "searchTime",
+          "type": "time",
+          "unfold": true,
+          "span": 7
+        }],
+      "unfoldState": false
+        },
+    "table":
+    {
+        "height": 300,
+        "columns": [
+          {
+            "label": "平台",
+            "sort": true,
+            "prop": "exportOrgName",
+            "width": 120,
+            "require": true
+          },
+          {
+            "label": "仓库/地点名称",
+            "sort": true,
+            "prop": "productNo",
+            "width": 120,
+            "require": true
+          },
+          {
+            "label": "车牌号",
+            "prop": "custMaterialNo",
+            "width": 140,
+            "require": true
+          },
+          {
+            "label": "司机手机号码",
+            "prop": "productName",
+            "width": 160,
+            "require": true
+          },
+          {
+            "label": "作业效率",
+            "prop": "rowType",
+            "type": "select",
+            "optionNum": "SYS_GW_LINE_TYPE",
+            "width": 100,
+            "require": true
+          },
+          {
+            "label": "现场指引",
+            "sort": false,
+            "prop": "qty",
+            "width": 100,
+            "require": true
+          },
+          {
+            "label": "员工态度",
+            "prop": "isCompleted",
+            "type": "select",
+            "optionNum": "SYS_WM_YES_NO",
+            "width": 90
+          },
+          {
+            "label": "评价详情",
+            "prop": "englishName",
+            "width": 400
+          },
+          {
+            "label": "评价时间",
+            "prop": "createTime",
+            "width": 150
+          }],
+        "leftOperation": false
+    },
+    "configuration": true,
+    "page": {
+        "layout": "total, sizes, prev, pager, next, jumper",
+        "pageSize": 10,
+        "pageSizes": [10, 20, 30, 50, 100]
+    }
+}

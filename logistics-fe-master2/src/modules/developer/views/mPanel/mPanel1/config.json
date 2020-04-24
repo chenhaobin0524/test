@@ -1,0 +1,119 @@
+{
+    "title":
+    {
+        "title": "用户列表",
+        "tips": "注释：用户列表"
+    },
+    "query":
+    {
+        "rows": 2,
+        "items": [
+        {
+            "field": "userName",
+            "value": "",
+            "label": "账户名称：",
+            "type": "Input",
+            "rows": 1,
+            "layout":
+            {
+                "row": 1,
+                "span": 6
+            }
+        },
+        {
+            "field": "server",
+            "value": "",
+            "label": "类型：",
+            "type": "Select",
+            "options": [
+            {
+                "label": "1",
+                "value": "24"
+            },
+            {
+                "label": "0",
+                "value": "25"
+            }],
+            "layout":
+            {
+                "row": 1,
+                "span": 4,
+                "width": "100%"
+            }
+        },
+        {
+            "field": "registTimeStart",
+            "value": "",
+            "label": "加入时间：",
+            "type": "DatePicker",
+            "pickerType": "daterange",
+            "format": "yyyy-MM-dd",
+            "layout":
+            {
+                "row": 1,
+                "span": 8,
+                "width": "100%"
+            }
+        }]
+    },
+    "toolbar":
+    {
+        "buttons": [
+        {
+            "icon": "plus",
+            "label": "新 建",
+            "event": "on-add"
+        }]
+    },
+    "table":
+    {
+        "showSelection": true,
+        "showIndex": true,
+        "pageSizeOpts": [5, 10, 15, 20],
+        "pageSize": 5,
+        "columns": [
+        {
+            "title": "账户名称",
+            "align": "center",
+            "key": "userName"
+        },
+        {
+            "title": "用户账号",
+            "align": "center",
+            "key": "userCode"
+        },
+        {
+            "title": "创建时间",
+            "align": "center",
+            "key": "registTime"
+        },
+        {
+            "title": "类型",
+            "align": "center",
+            "key": "tenant"
+        }],
+        "action": [
+        {
+            "type": "text",
+            "label": "查看",
+            "icon": "eye",
+            "size": "large",
+            "event": "on-view"
+        },
+        {
+            "type": "text",
+            "label": "修改",
+            "icon": "edit",
+            "size": "large",
+            "event": "on-edit"
+        },
+        {
+            "type": "text",
+            "label": "删除",
+            "icon": "trash-b",
+            "size": "large",
+            "event": "on-delete"
+        }]
+    },
+    "searchLeft": false
+}

@@ -1,0 +1,221 @@
+.storage-area-monitoring {
+    background-color: #284680;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+
+    .font-size-sub {
+        display: inline-block;
+        margin-left: 3vw;
+        margin-right: 1vw;
+        font-size: 1.25vw;
+    }
+    .font-size-add {
+        display: inline-block;
+        margin-left: 1vw;
+        font-size: 1.25vw;
+    }
+    .el-slider {
+        vertical-align: middle;
+        width: 7vw;
+        display: inline-block;
+    }
+    .el-slider__button {
+        height: 12px;
+        width: 12px;
+        border-color: #ffffff;
+    }
+    .el-slider__runway,
+    .el-slider__bar {
+        height: 4px;
+    }
+    .el-slider__bar {
+        background-color: #1eb2fc;
+    }
+    .menu {
+        position: relative;
+        float: left;
+        height: 100%;
+        width: 3.5rem;
+    }
+    .menu_desc {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: #fff;
+        position:absolute;
+        width:100%;
+        height:100%;
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+    .container {
+        float: left;
+        margin: 1.6rem 1.2rem;
+        width: calc(100% - 5.9rem);
+        height: 95%;
+        box-sizing: border-box;
+        border: 1px solid #2A4883;
+    }
+    .container_nav {
+        min-height: 7.5%;
+        background-color: #0f2348;
+        display: flex;
+        align-items:center;
+        padding: 0 2%;
+        color: #97a0b1;
+        font-size: 1.33rem;
+
+        .current {
+            // box-shadow: 0px 0px 5px 1px yellow;
+        }
+    }
+    .container_nav_storage {
+        padding: 1%;
+        margin: 0 1.5%;
+    }
+    .container_nav_storage:last-of-type {
+        margin-right: 6%;
+    }
+    .container_nav_storage.active {
+        color: #3af5e7;
+    }
+    .container_nav_st-total-num {
+        margin-left: 1%;
+        color: #3ae8ff;
+        font-size: 2rem;
+    }
+    .container_nav_date {
+        flex: 1;
+        text-align: right;
+        color: #ffffff;
+    }
+    .container_nav_date_prev {
+        margin-right: 0.5em;
+        padding: 0.3em 0.5em;
+    }
+    .container_nav_date_next {
+        margin-left: 0.5em;
+        padding: 0.3em 0.5em;
+    }
+    .container_split {
+        height: 2%;
+    }
+    .container_content {
+        height: 90.5%;
+        background-color: rgb(31, 62, 129);
+        display: flex;
+    }
+    // .container_content_title {
+    //     width: 3%;
+    //     height: 100%;
+    //     font-size: 1.33rem;
+    //     color: #e7eeff;
+
+    //     .st, .appointment {
+    //         display: flex;
+    //         align-items:center;
+    //         justify-content: center;
+    //         border-right: 1px solid #2D4E8B;
+    //     }
+    //     .st {
+    //         min-height: 5.5%;
+    //         border-bottom: 1px solid #2D4E8B;
+    //         box-sizing: border-box;
+    //     }
+    //     .appointment {
+    //         height: 94.5%;
+    //         font-size: 1.4rem;
+    //     }
+    // }
+    .container_content_detail {
+        flex: 1;
+        height: 100%;
+
+        .content {
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .content_item {
+            height: 50%;
+            width: 16.66%;
+        }
+        .content_no-data {
+            width: 100%;
+            height: 100%;
+        }
+        .content_no-data_title {
+            height: 5.5%;
+        }
+        .content_no-data_detail {
+            height: 94.5%;
+            color: #B8C2D7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.33rem;
+        }
+        .content_item_title,
+        .content_item_detail {
+            display: flex;
+            align-items:center;
+            justify-content: center;
+            border-right: 1px solid #495a77;
+        }
+        .content_item_title {
+            min-height: 11%;
+            border-bottom: 1px solid #495a77;
+            font-size: 1.45rem;
+            color: #cfe0fe;
+            box-sizing: border-box;
+            background-color: #0e2141;
+
+            &.disabled {
+                color: #ed1863;
+            }
+        }
+        .content_item:nth-child(n + 7) {
+
+            .content_item_title {
+                border-top: 4px solid #284680;
+            }
+        }
+        .content_item_detail {
+            height: 89%;
+            background-color: #0d2248;
+            overflow: hidden;
+            position: relative;
+        }
+        .content_item_detail_box {
+            text-align: center;
+            font-size: 1.8rem;
+            position: absolute;
+        }
+        .content_item_detail_box_car-no {
+            color: #f8da34;
+            line-height: 1.8em;
+        }
+        .content_item_detail_box_time {
+            color: #4cfce5;
+            line-height: 1.8em;
+        }
+        .content_item_detail_box_split {
+            border-top: 1px solid #8591a9;
+            margin: 0.8em 0;
+        }
+    }
+    .content_item:nth-child(6n) {
+        .content_item_title,
+        .content_item_detail {
+             border-right: none;
+         }
+    }
+    .content_item_detail_box > div:last-of-type {
+        .content_item_detail_box_split {
+            display: none;
+        }
+    }
+}

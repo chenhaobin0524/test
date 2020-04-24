@@ -1,0 +1,76 @@
+{
+    "searchList": {
+      "searchTxt": [
+        {
+          "name": "接收号码",
+          "value": "",
+          "type": "cascader",
+          "unfold": true,
+          "span": 4
+        },{
+          "name": "短信内容",
+          "value": "",
+          "type": "input",
+          "unfold": true,
+          "span": 3
+        },{
+          "name": "创建日期",
+          "value": "searchTime",
+          "type": "time",
+          "unfold": true,
+          "span": 7
+        }],
+      "unfoldState": false
+        },
+    "table":
+    {
+        "height": 300,
+        "columns": [
+          {
+            "label": "发送人",
+            "sort": true,
+            "prop": "exportOrgName",
+            "width": 120,
+            "require": true
+          },
+          {
+            "label": "手机号",
+            "sort": true,
+            "prop": "productNo",
+            "width": 120,
+            "require": true
+          },
+          {
+            "label": "短信内容",
+            "prop": "custMaterialNo",
+            "width": 140,
+            "require": true
+          },
+          {
+            "label": "状态",
+            "prop": "qty",
+            "type": "custom",
+            "width": 100,
+            "require": true
+          },
+          {
+            "label": "创建时间",
+            "prop": "createTime",
+            "width": 150,
+            "require": true
+          },
+          {
+            "label": "发送时间",
+            "prop": "createTime",
+            "width": 150,
+            "require": true
+          }],
+        "leftOperation": false
+    },
+    "configuration": true,
+    "page": {
+        "layout": "total, sizes, prev, pager, next, jumper",
+        "pageSize": 10,
+        "pageSizes": [10, 20, 30, 50, 100]
+    }
+}
